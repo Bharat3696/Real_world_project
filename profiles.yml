@@ -1,13 +1,14 @@
-lithia_project:
+lithia_project:                # 🔸 Name of your dbt project (must match in dbt_project.yml)
+  target: dev                  # 🔸 Environment you're working in (e.g., dev or prod)
   outputs:
-    dev:
-      account: KIFGRRR-FLB23697
-      database: C2C_DEV
-      password: Bharathmiz@3696
-      role: ACCOUNTADMIN
-      schema: RAW
-      threads: 1
-      type: snowflake
-      user: AZURETRAINING
-      warehouse: COMPUTE_WH
-  target: dev
+    dev:                       # 🔹 Configuration for the dev environment
+      type: snowflake          # ✅ You're using Snowflake
+      account: KIFGRRR-FLB23697 # E.g., xy12345.ap-south-1
+      user: AZURETRAINING      # Your Snowflake login
+      password: Bharathmiz@3696   # Your Snowflake password
+      role: ACCOUNTADMIN           # Role used for executing queries
+      database: C2C_DEV           # Our main dbt database
+      warehouse: COMPUTE_WH     # Compute power used
+      schema: RAW              # Default schema for dbt models
+      threads: 4               # Parallel threads
+      client_session_keep_alive: false
