@@ -1,0 +1,16 @@
+# dbt generated folders
+target/
+dbt_packages/
+logs/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# System files
+.DS_Store
+*.log
+
+# dbt cloud credentials
+.profiles.yml
+.env
