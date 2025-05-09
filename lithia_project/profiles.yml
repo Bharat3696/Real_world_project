@@ -1,0 +1,13 @@
+lithia_project:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: KIFGRRR-FLB23697
+      user: AZURETRAINING
+      password: Bharathmiz@3696 
+      role: ACCOUNTADMIN
+      database: EDW_DEV
+      warehouse: COMPUTE_WH
+      schema: RAW      
+      threads: 4
